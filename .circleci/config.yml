@@ -22,6 +22,9 @@ jobs:
             rm qcom_utils.mk
             wget https://raw.githubusercontent.com/CaliBerrr/WorkAround/main/qcom_utils.mk
             cd ~
+            cd ~/twrp/bootable/recovery
+            git fetch https://gerrit.twrp.me/android_bootable_recovery refs/changes/98/3298/2 && git cherry-pick FETCH_HEAD     
+            cd ~
             cd ~/twrp
             source build/envsetup.sh
             add_lunch_combo omni_laurel_sprout-eng
